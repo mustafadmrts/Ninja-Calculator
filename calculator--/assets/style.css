@@ -1,0 +1,168 @@
+@font-face {
+  font-family: digital;
+  src: url(./TrueType/SFDigitalReadout-Heavy.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(305deg, hsl(0deg, 0%, 0%) 0%, hsl(104deg, 5%, 42%) 68%, hsl(104deg, 8%, 60%) 92%, hsl(104deg, 15%, 74%) 98%, hsl(104deg, 30%, 85%) 100%, hsl(104deg, 100%, 95%) 100%);
+}
+body .calculator {
+  background-color: #282828;
+  width: 400px;
+  border-radius: 10px 50px 10px 10px;
+  box-shadow: 20px 17px 20px 0px rgba(0, 0, 0, 0.446);
+  border: 7px outset rgba(0, 0, 0, 0.5333333333);
+}
+body .calculator .calculator-display {
+  background-color: #d5e3e5;
+  opacity: 0.7;
+  background-image: linear-gradient(135deg, #b1c1c4 25%, transparent 25%), linear-gradient(225deg, #b1c1c4 25%, transparent 25%), linear-gradient(45deg, #b1c1c4 25%, transparent 25%), linear-gradient(315deg, #b1c1c4 25%, #d5e3e5 25%);
+  background-position: 4px 0, 4px 0, 0 0, 0 0;
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(0, 0, 0);
+  border-left: 30px solid #282828;
+  border-right: 30px solid #282828;
+  border-bottom: 10px solid #282828;
+  box-shadow: inset 10px 9px 12px 3px rgba(0, 0, 0, 0.35);
+  border: 15px inset rgba(0, 0, 0, 0.84);
+}
+body .calculator .calculator-buttons {
+  background-color: #313131;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+  padding: 2px;
+  border: 15px inset rgba(0, 0, 0, 0.27);
+}
+body .calculator .calculator-buttons .equal {
+  grid-row-start: 2;
+  grid-row-end: 6;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  background-color: #467079;
+  color: rgba(245, 245, 245, 0.764);
+  border: 4px outset #507d87;
+}
+body .calculator .sun-panel {
+  width: 100%;
+  height: 40px;
+  background-color: #282828;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  padding-right: 30px;
+}
+body .calculator .sun-panel .panel {
+  width: 150px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #542f03;
+  background-color: #542f03;
+  opacity: 0.5;
+  background-image: linear-gradient(#2a1803 0.8px, transparent 0.8px), linear-gradient(90deg, #2a1803 0.8px, transparent 0.8px), linear-gradient(#2a1803 0.4px, transparent 0.4px), linear-gradient(90deg, #2a1803 0.4px, #542f03 0.4px);
+  background-size: 20px 20px, 20px 20px, 4px 4px, 4px 4px;
+  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px, -0.4px -0.4px;
+  border-radius: 3px;
+  box-shadow: inset 9px 8px 5px 2px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 35px;
+  font-weight: 100;
+  font-family: digital;
+  overflow-x: auto;
+  letter-spacing: 5px;
+}
+
+h2 {
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgba(228, 228, 228, 0.5019607843);
+  word-spacing: 220px;
+  cursor: pointer;
+}
+
+h4 {
+  margin: 0;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(105, 105, 105);
+  text-align: end;
+  cursor: pointer;
+}
+
+h6 {
+  margin: 0;
+  padding-right: 30px;
+  text-align: end;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(105, 105, 105);
+  cursor: pointer;
+}
+
+button {
+  min-height: 50px;
+  font-size: 30px;
+  font-weight: 100;
+  border-radius: 2px;
+  color: rgba(245, 245, 245, 0.764);
+  border: 4px outset rgba(104, 104, 104, 0.57);
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.485);
+}
+button:hover {
+  filter: brightness(110%);
+}
+button:active {
+  transform: translateY(1px);
+}
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background-color: rgb(80, 72, 38);
+  color: rgba(0, 0, 0, 0.662);
+  font-size: 35px;
+  border: 4px outset rgba(99, 90, 48, 0.583);
+}
+
+.clear {
+  background-color: rgb(171, 9, 9);
+  color: rgba(245, 245, 245, 0.764);
+  border: 4px outset rgb(165, 53, 53);
+}
+.clear:hover {
+  filter: brightness(90%);
+}
+
+.hr {
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid rgba(166, 165, 161, 0.354);
+}/*# sourceMappingURL=style.css.map */
