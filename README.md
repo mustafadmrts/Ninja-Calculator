@@ -8,5 +8,5 @@
 
 <img width="1680" alt="calculator" src="https://github.com/mustafadmrts/Ninja-Calculator/assets/122678521/5b2fb225-ac4e-4351-b32c-ddda7b1c9208">
 
-http://127.0.0.1:5501/index.html
+https://mustafadmrts.github.io/Ninja-Calculator/
 
